@@ -231,8 +231,8 @@ button:active {
     transition: all 0.5 cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.container.icon:hover span,
-.container.icon:hover .tooltip {
+.container .icon:hover span,
+.container .icon:hover .tooltip {
     text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
 }
 
@@ -265,3 +265,82 @@ button:active {
 .container .Github:hover .tooltip::before {
     background-color: #3b5998;
 }
+
+/* -----------------------------------------
+   MOBILE VIEW (Max width: 768px)
+----------------------------------------- */
+@media (max-width: 768px) {
+    /* Desktop hide hamburger */
+.hamburger {
+    display: none;
+}
+
+    /* Navbar small size */
+    .navbar {
+        margin: 10px;
+        padding: 10px 15px;
+    }
+
+    /* Hide normal links */
+    .links {
+        display: none;
+        flex-direction: column;
+        background: cadetblue;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        width: 180px;
+        padding: 15px;
+        border-radius: 20px;
+        gap: 15px;
+        transition: 0.3s ease;
+    }
+
+    /* When active class added (JS code) */
+    .links.active {
+        display: flex;
+    }
+
+    /* Mobile links style */
+    .links li a {
+        font-size: 1.2rem;
+        margin: 10px 0;
+    }
+
+    /* Hide login + signup buttons */
+    .login,
+    .sign {
+        display: none;
+    }
+
+    /* INTRO TEXT resize */
+    .intro {
+        margin-top: 40%;
+        font-size: 2.5rem;
+    }
+
+    /* Email section */
+    .email {
+        margin-left: 10%;
+    }
+
+    /* Social icons move up */
+    .container {
+        bottom: 10px;
+        transform: translateX(-50%);
+    }
+
+    /* --------------- HAMBURGER MENU --------------- */
+    .hamburger {
+
+        display: block;
+        cursor: pointer;
+          margin-left: auto;
+        font-size: 30px;
+        color: white;
+        user-select: none;
+    }
+
+}
+
+
